@@ -6,7 +6,6 @@ from pathlib import Path
 import gpiozero
 import pygame
 
-from mfrc522 import SimpleMFRC522
 
 
 logging.basicConfig()
@@ -24,6 +23,8 @@ def load_library(path : Path):
 
 def main():
     amplifier = gpiozero.OutputDevice(21, active_high=True, initial_value=False)
+
+    from mfrc522 import SimpleMFRC522
 
     reader = SimpleMFRC522()
     SONGS = load_library(LIBRARY)
