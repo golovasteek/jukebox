@@ -7,8 +7,10 @@ name = "pypi"
 spidev = "*"
 mfrc522 = "*"
 pygame = "*"
+gpiozero = "*"
 
 [dev-packages]
+pytest = "*"
 
 [requires]
 python_version = "3.7"
